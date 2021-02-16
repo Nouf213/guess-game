@@ -1,5 +1,5 @@
 'use strict';
-
+let score=0;
 let yourname=prompt ('enter your name');
 function printGreeting(nome)
 {
@@ -9,43 +9,47 @@ printGreeting (yourname);
 
 let loveswim = prompt('Do i love swimming?y/yes').toLowerCase();
 //console.log(loveswim);
-while ((loveswim!=='yes' || loveswim!=='y') || (loveswim!=='n'|| loveswim!=='no')&&loveswim==='') {
+while ((loveswim!=='yes' && loveswim!=='y') && (loveswim!=='n'&& loveswim!=='no')&&loveswim==='') {
 //console.log('invalid answer')
-
   alert('invalid answer');
   loveswim=prompt('Do i love swimming?y/yes');
 }
 
-  if(loveswim==='y'|| loveswim==='yes')
+if(loveswim==='y'|| loveswim==='yes')
 {
   //console.log('hell yeaa')
-    alert('hell yeaa');
-  else
-  {
-    if(loveswim==='n' || loveswim==='no')
-      alert('wrong answer');
-  }
+  alert('hell yeaa');
+  score++;
+  console.log(score);
 }
+else
+{
+  if(loveswim==='n' || loveswim==='no')
+    alert('wrong answer');
+}
+
 
 
 let dive = prompt('Have i ever dive? y/yes').toLowerCase();
 //console.log(dive);
-while ((dive!=='yes' || dive!=='y') && (dive!=='n'|| dive!=='no')||dive==='') {
+while ((dive!=='yes' && dive!=='y') && (dive!=='n'&& dive!=='no')&&dive==='') {
   //console.log('invalid answer')
   alert('invalid answer');
   dive=prompt('Have i ever dive?y/yes');
 }
 
 if (dive==='no' || dive==='n') {
-    alert('never in my life');
-  } else {
-    if (dive==='yes' || dive ==='y')
-      alert('wrong answer');
-  }
+  alert('never in my life');
+  score++;
+  console.log(score);
+} else {
+  if (dive==='yes' || dive ==='y')
+    alert('wrong answer');
+}
 
 let likedive = prompt('Do i like diving?y/yes').toLowerCase();
 //console.log(likedive);
-while ((likedive!=='yes' || likedive!=='y') && (likedive!=='n'|| likedive!=='no')|| likedive==='') {
+while ((likedive!=='yes' && likedive!=='y') && (likedive!=='n'&& likedive!=='no')&& likedive==='') {
   //console.log('invalid answer')
   alert('invalid answer');
   likedive=prompt('Do i like diving?y/yes');
@@ -53,6 +57,8 @@ while ((likedive!=='yes' || likedive!=='y') && (likedive!=='n'|| likedive!=='no'
 
 if (likedive==='no'|| likedive==='n') {
   alert('yes i dont like diving');
+  score++;
+  console.log(score);
 } else {
   if(likedive==='y'||likedive==='yes')
     alert('you dont know me well!!');
@@ -60,10 +66,10 @@ if (likedive==='no'|| likedive==='n') {
 
 let divesuit = prompt('Have i ever wore a diving suit?y/yes').toLowerCase();
 //console.log(divesuit);
-while ((divesuit!=='yes' || divesuit!=='y') && (divesuit!=='n'|| divesuit!=='no')|| divesuit==='') {
+while ((divesuit!=='yes' && divesuit!=='y') && (divesuit!=='n'&& divesuit!=='no')&& divesuit==='') {
   //console.log('invalid answer')
   alert('invalid answer');
-  divesuit=prompt('Have i ever wore a diving suit?y/yes');
+  divesuit=prompt('Have i ever wore a diving suit?y/yes').toLowerCase;
 }
 
 if (divesuit==='no'||divesuit==='n') {
@@ -71,14 +77,16 @@ if (divesuit==='no'||divesuit==='n') {
 } else {
   if(divesuit==='y'||divesuit==='yes')
     alert('comfiest thing ever');
+  score++;
+  console.log(score);
 }
 
 let Coral = prompt('Do i like Coral?y/yes').toLowerCase();
 //console.log(Coral);
-while ((Coral!=='yes' || Coral!=='y') && (Coral!=='n'|| Coral!=='no')||Coral==='') {
+while ((Coral!=='yes' && Coral!=='y') && (Coral!=='n'&& Coral!=='no')&& Coral==='') {
   //console.log('invalid answer')
   alert('invalid answer');
-  Coral=prompt('Do i like Coral?y/yes');
+  Coral=prompt('Do i like Coral?y/yes').toLowerCase();
 }
 
 if (Coral==='no'|| Coral==='n') {
@@ -86,32 +94,51 @@ if (Coral==='no'|| Coral==='n') {
 } else {
   if(Coral==='yes'||Coral==='y')
     alert('yess, it is full of colors');
+  score++;
+  console.log(score);
 }
 
-let Age = prompt('please enter your age?');
-console.log(Age);
+let Age = prompt('How old i am?');
+for(let i=0; i<3 ; i++)
 
+  if(Number(Age)===25)
+  {
+    alert('yes i am');
+    score++;
+    console.log(score);
+    break;
+  //console.log(Age);
+  }
+  else
+  {
+    if (Number(Age)>25){
+      alert('too high');
+      Age=prompt('How old i am?');
+    }
+    if(Number(Age)<25)
+    { alert('too low');
+      Age=prompt('How old i am?');
+    }
+  }
 
-Age = 20, 25, 30, 60;
-
-switch (Age) {
-case 25:
-  console.log('Your age is', Age, 'your course is bubble');
-  break;
-case 20:
-  console.log(Age ,'your course is open water');
-  break;
-
-case 30:
-  console.log('Your age is', Age , 'your course is rescue diver');
-  break;
-case 60:
-  console.log('Your age is', Age, 'your course is instructor diver');
-  break;
-default:
-  console.log('You are not allowed');
-  break;
+alert('i am 25');
+let arr=['mansaf','mlokheyeh','msakhan'];
+alert('mansaf mlokheyeh msakhan')
+let dish=prompt('what is my favourite dish from this list ');
+for(let i=0;i<5;i++){
+  if (dish===arr[0]) {
+    alert('who doesnt love mansaf!!');
+    score++;
+    console.log(score);
+    break;
+  } else {
+    dish=prompt ('what is my favourite dish from this list ');
+  }
 }
-
-
-printGreeting ('goodbyeee'+' '+yourname);
+console.log('your score is-->',score,'out of 7');
+alert('your score is-->'+score+'out of 7');
+function bye(nime)
+{
+  alert('goodbye'+' '+ nime);
+}
+bye (yourname);
