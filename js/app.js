@@ -9,14 +9,15 @@ printGreeting (yourname);
 
 let loveswim = prompt('Do i love swimming?y/yes').toLowerCase();
 //console.log(loveswim);
-if ((loveswim!=='yes' || loveswim!=='y') && (loveswim!=='n'|| loveswim!=='no')&&loveswim==='') {
+while ((loveswim!=='yes' || loveswim!=='y') || (loveswim!=='n'|| loveswim!=='no')&&loveswim==='') {
 //console.log('invalid answer')
 
   alert('invalid answer');
   loveswim=prompt('Do i love swimming?y/yes');
 }
-else{
+
   if(loveswim==='y'|| loveswim==='yes')
+{
   //console.log('hell yeaa')
     alert('hell yeaa');
   else
@@ -29,26 +30,27 @@ else{
 
 let dive = prompt('Have i ever dive? y/yes').toLowerCase();
 //console.log(dive);
-if ((dive!=='yes' || dive!=='y') && (dive!=='n'|| dive!=='no')||dive==='') {
+while ((dive!=='yes' || dive!=='y') && (dive!=='n'|| dive!=='no')||dive==='') {
   //console.log('invalid answer')
   alert('invalid answer');
   dive=prompt('Have i ever dive?y/yes');
 }
-else{
-  if (dive==='no' || dive==='n') {
+
+if (dive==='no' || dive==='n') {
     alert('never in my life');
   } else {
     if (dive==='yes' || dive ==='y')
       alert('wrong answer');
   }
-}
+
 let likedive = prompt('Do i like diving?y/yes').toLowerCase();
 //console.log(likedive);
-if ((likedive!=='yes' || likedive!=='y') && (likedive!=='n'|| likedive!=='no')|| likedive==='') {
+while ((likedive!=='yes' || likedive!=='y') && (likedive!=='n'|| likedive!=='no')|| likedive==='') {
   //console.log('invalid answer')
   alert('invalid answer');
   likedive=prompt('Do i like diving?y/yes');
 }
+
 if (likedive==='no'|| likedive==='n') {
   alert('yes i dont like diving');
 } else {
@@ -58,11 +60,12 @@ if (likedive==='no'|| likedive==='n') {
 
 let divesuit = prompt('Have i ever wore a diving suit?y/yes').toLowerCase();
 //console.log(divesuit);
-if ((divesuit!=='yes' || divesuit!=='y') && (divesuit!=='n'|| divesuit!=='no')|| divesuit==='') {
+while ((divesuit!=='yes' || divesuit!=='y') && (divesuit!=='n'|| divesuit!=='no')|| divesuit==='') {
   //console.log('invalid answer')
   alert('invalid answer');
   divesuit=prompt('Have i ever wore a diving suit?y/yes');
 }
+
 if (divesuit==='no'||divesuit==='n') {
   alert('haha! tricky question. nooo?');
 } else {
@@ -72,11 +75,12 @@ if (divesuit==='no'||divesuit==='n') {
 
 let Coral = prompt('Do i like Coral?y/yes').toLowerCase();
 //console.log(Coral);
-if ((Coral!=='yes' || Coral!=='y') && (Coral!=='n'|| Coral!=='no')||Coral==='') {
+while ((Coral!=='yes' || Coral!=='y') && (Coral!=='n'|| Coral!=='no')||Coral==='') {
   //console.log('invalid answer')
   alert('invalid answer');
   Coral=prompt('Do i like Coral?y/yes');
 }
+
 if (Coral==='no'|| Coral==='n') {
   alert('why i would not like them');
 } else {
