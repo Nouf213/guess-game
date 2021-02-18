@@ -1,8 +1,13 @@
 body {
     width: 960px;
     margin: auto;
+    background-color: khaki;
   }
-  
+body header ol{
+  line-height: 20px;
+  color: brown;
+  text-align: center;
+}
   a {
     text-decoration: none;
     text-transform: capitalize;  
@@ -26,6 +31,8 @@ body {
   
   p {
     line-height: 30px;
+    border: royalblue;
+    padding: 30%;
   }
   
   main p:nth-child(2) {
@@ -33,13 +40,18 @@ body {
   }
   main ul li:nth-child(odd) {
     background:blue ;
+    font-size: medium;
   }
   
   main ul li:nth-child(even) {
     background:cornflowerblue;
     border-radius: 5px;
+    font-size: small;
   }
     
   footer {
     text-align: center;
+    font-size: x-small;
+    background-color: black;
+    color: blanchedalmond;
   }
